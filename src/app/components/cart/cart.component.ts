@@ -17,6 +17,7 @@ export class CartComponent implements OnInit{
 
   validCouponDiscountPercent;
   validCouponDiscountPrice;
+  finalPrice:number = 0;
 
   constructor(private couponService: CouponService, private cartService: CartService, private toastr: ToastrService){}
   ngOnInit(): void {
@@ -35,7 +36,9 @@ export class CartComponent implements OnInit{
 
           this.validCouponDiscountPercent = coup.discountPercent;
           this.validCouponDiscountPrice = (this.total * (this.validCouponDiscountPercent / 100)).toFixed(2);
-
+          this.cartService.validCouponDiscountPercent = this.validCouponDiscountPercent;
+          this.cartService.validCouponDiscountPrice = this.validCouponDiscountPrice;
+          this.cartService.validCouponCode = coup.couponCode;
         }
       }
 
@@ -57,8 +60,9 @@ export class CartComponent implements OnInit{
   
   calculateFinalPrice(){
     if(this.total > 0 && this.validCouponDiscountPrice > 0){
-      let finalPrice = this.total - this.validCouponDiscountPrice;
-      return finalPrice.toFixed(2);
+      this.finalPrice = this.total - this.validCouponDiscountPrice;
+      this.cartService.finalPrice = this.finalPrice;
+      return this.finalPrice.toFixed(2);
     }
     else return this.total.toFixed(2);
   }

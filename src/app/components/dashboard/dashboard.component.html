@@ -5,7 +5,7 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item  border border-dark" *ngFor="let heroProduct of heroProducts  | async; let i = index " [ngClass]="i === 0 ? 'active' : ''">
+      <div class="carousel-item  border border-primary border-5" *ngFor="let heroProduct of heroProducts  | async; let i = index " [ngClass]="i === 0 ? 'active' : ''">
         <img src="{{heroProduct.image}}" class="d-block w-100" alt="{{heroProduct.title}}">
       </div>
     </div>
@@ -22,20 +22,20 @@
 
 
 
-<div class="row justify-content-around bg-dark-subtle">
-    <div class="card col-3 mt-3 mb-3 bg-body-secondary" style="width: 18rem;" *ngFor="let product of products  | async;">
+<div class="row justify-content-around bgcol">
+    <div class="card col-3 mt-3 mb-3 bg-white" style="width: 18rem;" *ngFor="let product of products  | async;">
         <img style="height: 300px;margin-top: 10px" src={{product.image}} class="card-img-top" alt={{product.name}}>
         <div class="card-body">
           <h5 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{product.title}}</h5>
           <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{product.description}}</p>
         </div>
         <ul class="list-group list-group-flush ">
-          <li class="list-group-item bg-secondary-subtle">Quantity: 1 unit</li>
-          <li class="list-group-item bg-secondary-subtle">Category: {{product.category}}</li>
-          <li class="list-group-item bg-secondary-subtle">Price: {{product.price | currency : "INR" }} </li>
+          <li class="list-group-item bg-white">Quantity: 1 unit</li>
+          <li class="list-group-item bg-white">Category: {{product.category}}</li>
+          <li class="list-group-item bg-white">Price: {{product.price | currency : "INR" }} </li>
         </ul>
         <div class="card-body">
-            <button (click)="addToCart(product)" class="btn btn-outline-secondary me-2 ms-2" type="submit">Add to Cart</button>
+            <button (click)="addToCart(product)" class="btn btn-primary btn-block me-2 ms-2" type="submit">Add to Cart</button>
           <a href="#" class="card-link">View Product</a>
         </div>
     </div>

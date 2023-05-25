@@ -7,6 +7,12 @@ import { product } from 'src/app/models/product';
 export class CartService {
 
   addedProducts = new Map<product, number>();
+
+  validCouponDiscountPercent = 0;
+  validCouponDiscountPrice = 0;
+  finalPrice:number = 0;
+  validCouponCode = ""
+
   val?:any;
   constructor() { }
 
