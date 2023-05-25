@@ -1,0 +1,42 @@
+{
+  "HeroProducts": [
+    {
+      "id": 1,
+      "image": "https://picsum.photos/id/1/1080/400",
+      "name": "Sample Name",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, est?"
+    },
+    {
+      "id": 2,
+      "image": "https://picsum.photos/id/2/1080/400",
+      "name": "Sample Name",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, est?"
+    },
+    {
+      "id": 3,
+      "image": "https://picsum.photos/id/3/1080/400",
+      "name": "Sample Name",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, est?"
+    }
+  ],
+  "Coupons": [
+    {
+      "couponId": 1,
+      "couponCode": "abc",
+      "discountPercent": 10
+    },
+    {
+      "couponId": 2,
+      "couponCode": "DIWALIDASHMART",
+      "discountPercent": 30
+    },
+    {
+      "couponId": 3,
+      "couponCode": "HOLIASHMART",
+      "discountPercent": 20
+    }
+  ]
+}
