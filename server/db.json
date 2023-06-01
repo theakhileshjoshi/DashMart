@@ -38,5 +38,22 @@
       "couponCode": "HOLIASHMART",
       "discountPercent": 20
     }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "name": "Akhilesh Joshi",
+      "userName": "theakhileshjoshi",
+      "mobileNumber": "9325013341",
+      "email": "theakhileshjoshi@gmail.com",
+      "password": "asdf4321"
+    },
+    {
+      "email": "mk@mk.com",
+      "mobileNumber": "09777777777",
+      "name": "M****** K*******",
+      "password": "asdf4321",
+      "id": 2
+    }
   ]
 }

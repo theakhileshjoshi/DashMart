@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="login-box">
+    <div class="container px-4 py-5 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <form class=" form-group col-md-8 col-10 " [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <h3 class="mb-5 text-center heading">We are DashMart</h3>
+    
+                            <h6 class="msg-info">Please login to your account</h6>
+                            <div class="form">
+                                <label for="userEmail" class="form-control-label text-muted">Username</label>
+                                <input type="email" formControlName="email" class="form-control" id="userEmail" placeholder="name@example.com">
+                            </div>
+    
+                            <div class="form">
+                                <label class="form-control-label text-muted">Password</label>
+                                <input type="password"  formControlName="password" id="psw" name="psw" placeholder="Password" class="form-control">
+                            </div>
+                            <p class="text-danger mb-0" *ngIf="!isInputValid">
+                                Username and/or Password is Invalid.
+                            </p>
+                            <div class="row justify-content-center my-3 px-3">
+                                <button type="submit" class="btn-block btn-color">Login to DashMart</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bottom text-center mb-5">
+                        <p  class="sm-text mx-auto mb-3">Don't have an account?<button type="submit" routerLink="../signup" class="btn btn-white ms-2" >Create new</button></p>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="my-auto mx-md-5 px-md-5 right">
+                        <h3 class="text-white">We are more than just a company</h3>
+                        <small class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
